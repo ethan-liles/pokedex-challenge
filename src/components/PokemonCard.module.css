@@ -1,0 +1,86 @@
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+.imageArea {
+  background: color-mix(in srgb, var(--type-color) 18%, white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 12px 4px;
+  position: relative;
+}
+
+.number {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.5px;
+}
+
+.sprite {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  image-rendering: auto;
+}
+
+.info {
+  padding: 10px 12px 14px;
+}
+
+.name {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #1a1a2e;
+  letter-spacing: 0.2px;
+}
+
+.types {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.typeBadge {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 0.6px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Skeleton */
+.skeleton {
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #ececec 25%, #ddd 50%, #ececec 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  min-height: 200px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
