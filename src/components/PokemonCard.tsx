@@ -4,13 +4,18 @@ import styles from './PokemonCard.module.css'
 
 type Props = {
   name: string
+  typeFilter: string | null
 }
 
-function PokemonCard({ name }: Props) {
+function PokemonCard({ name, typeFilter }: Props) {
   const { data: pokemon, isLoading } = useGetPokemonQuery(name)
 
   if (isLoading || !pokemon) {
     return <div className={styles.skeleton} />
+  }
+
+  if (typeFilter && !pokemon.types.some(t => t.type.name === typeFilter)) {
+    return null
   }
 
   const primaryType = pokemon.types[0].type.name
