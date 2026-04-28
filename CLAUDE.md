@@ -19,6 +19,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   install and why, then wait.
 - Don't delete files. Mark them as deprecated with a comment instead, 
   and flag them for manual removal.
+- Don't try to run `bun run dev`.
 
 ## Project Overview
 
