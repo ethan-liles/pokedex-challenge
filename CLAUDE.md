@@ -31,7 +31,6 @@ Interview technical challenge: a React + TypeScript SPA that displays the origin
 
 ```bash
 bun install        # install dependencies
-bun run dev        # start dev server (Vite)
 bun run build      # production build (tsc + vite build)
 bun run preview    # preview production build locally
 bun run lint       # ESLint
